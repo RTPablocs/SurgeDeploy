@@ -1,0 +1,27 @@
+name: 'SurgeDeploy'
+description: 'Easy Surge Deploy Action'
+
+inputs:
+  domain: 
+    description: 'Domain to deploy to surge'
+    required: false
+    default: ''
+
+  path:
+    description: 'Path for publishing to surge'
+    required: true
+    default: '.'
+  
+  login: 
+    description: 'Surge Login mail'
+    required: true
+    default: ''
+
+  token: 
+    description: 'Surge token (from surge token)'
+    required: true
+    default: ''
+
+runs:
+  using: 'node12'
+  main: 'main.js'
